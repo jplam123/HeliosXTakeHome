@@ -12,7 +12,6 @@ import lombok.*;
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Answer {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,5 +22,4 @@ public class Answer {
     private String questionId;
     @NonNull
     private String answer;
-
 }

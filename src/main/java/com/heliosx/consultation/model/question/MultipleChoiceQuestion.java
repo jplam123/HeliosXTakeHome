@@ -4,11 +4,11 @@ import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
 @Entity
 public class MultipleChoiceQuestion extends Question {
-    private List<String> options;
+    private Set<String> options;
 }

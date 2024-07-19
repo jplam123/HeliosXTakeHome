@@ -4,9 +4,7 @@ import com.heliosx.consultation.model.answer.Answer;
 
 import java.util.List;
 
-public class BaseEligibilityService {
-
-    protected boolean hasRequiredAnswers(List<Answer> answers) {
-        return answers.stream().anyMatch(answer -> "required".equals(answer.getAnswer()));
-    }
+public interface BaseEligibilityService {
+    boolean checkEligibility(List<Answer> answers);
+    boolean requiredQuestionsAnswered(List<Answer> answers);
 }
