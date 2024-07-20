@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "bb9d6b27-ed60-4228-904a-83f0458f5c2c",
+		"name": "HeliosX collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12090417"
+	},
+	"item": [
+		{
+			"name": "Get Eligibility for Genovian Pear Allergy for user123",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"user123\",\n    \"answers\": [\n        {\"questionId\": \"q1\", \"answer\": \"Yes\"},\n        {\"questionId\": \"q2\", \"answer\": \"No\"},\n        {\"questionId\": \"q3\", \"answer\": \"Maybe\"},\n        {\"questionId\": \"q4\", \"answer\": \"19\"}\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eligibility/genovian-pear-allergy/user123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eligibility",
+						"genovian-pear-allergy",
+						"user123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Questions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post answers to api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"user123\",\n    \"answers\": [\n        {\n            \"questionId\": \"q1\",\n            \"answer\": \"yes\"\n        },\n        {\n            \"questionId\": \"q2\",\n            \"answer\": \"no\"\n        },\n        {\n            \"questionId\": \"q3\",\n            \"answer\": \"Some free text answer\"\n        },\n        {\n            \"questionId\": \"q4\",\n            \"answer\": \"19\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/answers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"answers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get answers for user123",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/answers/user123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"answers",
+						"user123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get eligibility for user123 for genovian pear",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"user123\",\n    \"answers\": [\n        {\"questionId\": \"q1\", \"answer\": \"Yes\"},\n        {\"questionId\": \"q2\", \"answer\": \"No\"},\n        {\"questionId\": \"q3\", \"answer\": \"Maybe\"},\n        {\"questionId\": \"q4\", \"answer\": \"19\"}\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eligibility/genovian-pear-allergy/user123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eligibility",
+						"genovian-pear-allergy",
+						"user123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
